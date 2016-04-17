@@ -1,5 +1,7 @@
 import requests
 
+import secrets
+
 def perform_backup(send_notification, uploader, notifier):
     url = 'https://api.pinboard.in/v1/posts/all?format=json&auth_token=%s' % secrets.PINBOARD_AUTH_TOKEN
     result = requests.get(url).json()
